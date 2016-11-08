@@ -1,0 +1,9 @@
+{
+  "testData":{
+    "firstName": "John",
+  "lastName": "Doe",
+  "age": "19",
+  "gender": "M",
+  "todoListUrl": "./data/users/sally.json"
+	}
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body>
+     <h1>Todo List</h1>
+	<div ng-controller="MainController as main">
+    <input type="submit" id="main-btn" value="Rundom" ng-click="main.activate()">
+    <div id="container">
+      <div class="data" id="data1">
+      <h2>Basic data</h2>
+        <li ng-repeat="item in main.data1">
+          {{item}}
+        </li>
+      </div>
+      <div class="data" id="data2">
+      <h2>Routine</h2>
+        <li ng-repeat="item in main.data2">
+          {{item}}
+        </li>
+      </div>
+      <div class="data" id="data3">
+      <h2>Meet</h2>
+        <li ng-repeat="item in main.data3">
+          {{item}}
+        </li>
+      </div>
+    </div>
+        <div ng-controller="AppCtrl" ng-cloak="" class="navBardemoBasicUsage" >
+            <md-content class="md-padding">
+                <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                    <md-nav-item md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>
+                    <md-nav-item md-nav-click="goto('page2')" name="page2">Page Two</md-nav-item>
+                    <md-nav-item md-nav-click="goto('page3')" name="page3">Page Three</md-nav-item>
+                </md-nav-bar>
+                <div class="ext-content">
+                    External content for `<span>{{item}}</span>`
+                </div>
+            </md-content></div>
+  </div>
+     <script src="js/main.js"></script>
+     <script src="js/main.controller.js"></script>
+     <script src="js/helpers.module.js"></script>
+     <script src="js/dataservice.service.js"></script>
+     <script src="js/navigation.js"></script>
+</body>
+</html>
